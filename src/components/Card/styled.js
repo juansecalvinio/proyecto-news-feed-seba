@@ -14,14 +14,20 @@ export const CardImage = styled.div`
 
     img{
         border-radius: 5px 5px 0px 0px;
+        max-width: 100%;
     }
 `
 
-export const CardTitle = styled.h2`
+export const CardTitle = styled.h3`
     text-align: center;
     padding: 30px;
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
 `
 
-export const CardFooter = styled.h3`
+export const CardFooter = styled.h4`
     text-align: center;
 `
