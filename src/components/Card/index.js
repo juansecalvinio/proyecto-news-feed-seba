@@ -1,15 +1,19 @@
 import React from 'react';
+import { CardWrapper, CardImage, CardTitle, CardFooter } from './styled';
 
-import { CardWrapper, CardImage, CardTitle, Cardfooter, CardFooter } from './styled';
-
-const Card = () => {
+const Card = (props) => {
+    
     return(
         <CardWrapper>
             <CardImage>
-                <img src="https://images.clarin.com/2017/04/04/Hkv4HT8pe_600x338.jpg"/>
+                <img src={ props.image }/>
             </CardImage> 
-            <CardTitle>Este es un titulo</CardTitle>
-            <CardFooter> 19:50 | Clarin </CardFooter>
+            <CardTitle>
+                <a href={ props.url }>
+                    { props.title }
+                </a>
+            </CardTitle>    
+            <CardFooter>{ props.source }</CardFooter>
         </CardWrapper>
     )
 }
