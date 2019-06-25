@@ -5,9 +5,9 @@ import SocialNetworkWrapper from './styled';
 const SocialNetwork = () => {
     return(
         <SocialNetworkWrapper>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-twitter"></i>
+            <i className="fab fa-twitter"></i>
+            <i className="fab fa-twitter"></i>
+            <i className="fab fa-twitter"></i>
         </SocialNetworkWrapper>
     )
 }

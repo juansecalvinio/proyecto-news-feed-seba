@@ -1,16 +1,23 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import SideBarWrapper from './styled';
+import {SideBarWrapper, Items } from './styled';
 
 const SideBar = () => {
     return(
             <SideBarWrapper>
-                <Link to="/">Home</Link>
-                <Link to="/politica">Politica</Link>
-                <Link to="/internacionales">Internacionales</Link>
-                <Link to="/tecnologia">Tecnologia</Link>
-                <Link to="/espectaculos">Espectaculos</Link>
-                <Link to="/deportes">Deportes</Link>
+                <Items className="items"><i className="fas fa-home"></i><Link to="/" className="link">Home</Link></Items>
+                <hr></hr>
+                <Items className="items"><i className="fas fa-balance-scale"></i><Link to="/politica" className="link">Politica</Link></Items>
+                <hr></hr>
+                <Items className="items"><i className="fas fa-globe-americas"></i><Link to="/internacionales" className="link">Internacionales</Link></Items>
+                <hr></hr>
+                <Items className="items"><i className="fas fa-microchip"></i><Link to="/tecnologia" className="link">Tecnologia</Link></Items>
+                <hr></hr>
+                <Items className="items"><i className="fas fa-glasses"></i><Link to="/espectaculos" className="link">Espectaculos</Link></Items>
+                <hr></hr>
+                <Items className="items"><i className="fas fa-futbol"></i><Link to="/deportes" className="link">Deportes</Link></Items>
+                <hr></hr>
+                
             </SideBarWrapper>
     )
 }

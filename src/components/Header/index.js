@@ -1,20 +1,49 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 //components
-import HeaderWrapper from './styled';
-import Brand from '../Brand';
-import InputSeacrh from '../InputSearch';
-import SocialNetwork from '../SocialNetwork';
+import { Logo, 
+        SearchButton, 
+        SearchInput, 
+        HeaderWrapper, 
+        InputWrapper, 
+        SocialNetwork, 
+        SocialNetworkItem 
+    } from './styled';
 
 
-const Header = () => {
-    return(
-        <HeaderWrapper>
-            <Brand />
-            <InputSeacrh placeholder="Search" />
-            <SocialNetwork />
-        </HeaderWrapper>
-    )
+
+class Header extends Component {
+    constructor(){
+        super()
+        this.state = {
+            key: ""
+        }
+    }
+
+    handlerKeyChange = (e) => {
+        this.setState({
+            key: e.target.value
+        })
+    }
+
+    render(){
+
+        return(
+            <HeaderWrapper>
+                <Logo> <h1>NeewsFeeds</h1> </Logo>
+                <InputWrapper>
+                    <SearchInput type="text" placeholder="Buscar Noticias" value={ this.state.key } onChange={this.handlerKeyChange}/> 
+                    <SearchButton href={`/search/${ this.state.key }`}><p>Buscar</p></SearchButton>
+                </InputWrapper>
+                <SocialNetwork>
+                    <SocialNetworkItem><i className="fab fa-twitter"></i></SocialNetworkItem>
+                    <SocialNetworkItem><i className="fab fa-twitter"></i></SocialNetworkItem>
+                    <SocialNetworkItem><i className="fab fa-twitter"></i></SocialNetworkItem>
+                </SocialNetwork>
+            </HeaderWrapper>
+        )
+    }
 }
 
 export default Header;
+

@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const  CardWrapper = styled.div`
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
     border-radius: 5px;
     background: white;
+    padding-bottom: 10px;
     border: 1px solid #ededf0;
     box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
     transition: all ease 150ms;
@@ -21,13 +23,12 @@ export const CardImage = styled.div`
 export const CardTitle = styled.h3`
     text-align: center;
     padding: 30px;
-
-    a{
-        text-decoration: none;
-        color: black;
-    }
+    font-family: 'Open Sans', sans-serif;
+    color: black;
 `
 
 export const CardFooter = styled.h4`
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: grey;
 `
